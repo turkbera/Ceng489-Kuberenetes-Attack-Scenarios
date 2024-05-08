@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: text4shell-cve3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: text4shell-cve3
+  template:
+    metadata:
+      labels:
+        app: text4shell-cve3
+    spec:
+      containers:
+      - name: text4shell-cve3
+        image: namzoyatuk/text4shell-cve3
+        ports:
+        - containerPort: 8080
