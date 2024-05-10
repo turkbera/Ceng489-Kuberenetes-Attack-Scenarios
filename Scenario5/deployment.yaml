@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-pt-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apache-pt
+  template:
+    metadata:
+      labels:
+        app: apache-pt
+    spec:
+      containers:
+      - name: apache-pt
+        image: namzoyatuk/httpd-cve5
+        ports:
+        - containerPort: 80
