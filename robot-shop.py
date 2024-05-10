@@ -1,7 +1,7 @@
 import requests
 
 # Configuration
-rabbitmq_url = 'http://192.168.49.2:31479'
+rabbitmq_url = 'http://10.105.180.222:15672'
 username = 'guest'  # Default username; change as needed
 password = 'guest'  # Default password; change as needed
 payload_size = 5000000  # Size of the payload in bytes
