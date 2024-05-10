@@ -1,7 +1,7 @@
 # CVE-2021-3156
 Sudo before 1.9.5p2 contains an off-by-one error that can result in a heap-based buffer overflow, which allows privilege escalation to root via "sudoedit -s" and a command-line argument that ends with a single backslash character. [CVE-2021-3156](https://www.cve.org/CVERecord?id=CVE-2021-3156)
 
-## POC
+## PoC
 The PoC from CptGibbon's [PoC repository](https://github.com/CptGibbon/CVE-2021-3156)
 
 ## Setup and Demo
