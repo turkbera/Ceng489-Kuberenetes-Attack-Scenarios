@@ -6,8 +6,6 @@ This affects the package xmlhttprequest before 1.7.0; all versions of package xm
 
 The PoC from s-index's [PoC repository](https://github.com/s-index/CVE-2020-28502)
 
-## Setup and Demo
-
 The image namzoyatuk/xmlhttprequest-cve7 built by Dockerfile provided in the [PoC repository](https://github.com/s-index/CVE-2020-28502)
 
 Deployment to Kubernetes can be done by executing below commands:
