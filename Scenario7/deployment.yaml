@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xmlhttprequest-cve7-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xmlhttprequest-cve7
+  template:
+    metadata:
+      labels:
+        app: xmlhttprequest-cve7
+    spec:
+      containers:
+      - name: xmlhttprequest-cve7
+        image: namzoyatuk/xmlhttprequest-cve7
+        ports:
+        - containerPort: 3000

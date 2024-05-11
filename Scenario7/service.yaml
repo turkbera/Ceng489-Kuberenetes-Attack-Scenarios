@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: xmlhttprequest-cve7-service
+spec:
+  selector:
+    app: xmlhttprequest-cve7
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: NodePort
