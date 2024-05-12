@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linuxkernel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: linuxkernel
+  template:
+    metadata:
+      labels:
+        app: linuxkernel
+    spec:
+      containers:
+      - name: linuxkernel
+        image: berrakkafa/linuxkernel:latest
+        ports:
+        - containerPort: 8080
+        securityContext:
+          privileged: true  # Gives the container full access to the host
+          allowPrivilegeEscalation: true
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do sleep 30; done"]
+
